@@ -69,27 +69,28 @@ const DashboardContent = () => {
               </div>
             </div>
 
-            {/* Metric Cards Container - This grid now takes up the remaining space. */}
-            <div className="grid grid-cols-2 gap-4 flex-grow">
-              <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
-                <p className="text-lg font-bold text-blue-500">₦120,000,000.00</p>
-                <p className="text-xs text-gray-500">Total Inflow <span className="text-green-500">3.6%</span></p>
-              </div>
-              <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
-                <p className="text-lg font-bold text-green-500">₦50,000,000.00</p>
-                <p className="text-xs text-gray-500">MRR <span className="text-green-500">2.5%</span></p>
-              </div>
-              <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
-                <p className="text-lg font-bold text-green-500">₦200,000,000.00</p>
-                <p className="text-xs text-gray-500">Commission Revenue <span className="text-green-500">0.8%</span></p>
-              </div>
-              <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
-                <p className="text-lg font-bold text-red-500">₦100,000,000.00</p>
-                <p className="text-xs text-gray-500">GMV <span className="text-red-500">0.6%</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
+          <div className="grid grid-cols-2 gap-4 flex-grow">
+    <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
+        {/* Reduce font size on small screens, scale up on larger ones. */}
+        <p className="text-base sm:text-lg font-bold text-blue-500">₦120,000,000.00</p>
+        <p className="text-xs text-gray-500">Total Inflow <span className="text-green-500">3.6%</span></p>
+    </div>
+    <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
+        {/* Reduce font size on small screens, scale up on larger ones. */}
+        <p className="text-base sm:text-lg font-bold text-green-500">₦50,000,000.00</p>
+        <p className="text-xs text-gray-500">MRR <span className="text-green-500">2.5%</span></p>
+    </div>
+    <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
+        {/* Reduce font size on small screens, scale up on larger ones. */}
+        <p className="text-base sm:text-lg font-bold text-green-500">₦200,000,000.00</p>
+        <p className="text-xs text-gray-500">Commission Revenue <span className="text-green-500">0.8%</span></p>
+    </div>
+    <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
+        {/* Reduce font size on small screens, scale up on larger ones. */}
+        <p className="text-base sm:text-lg font-bold text-red-500">₦100,000,000.00</p>
+        <p className="text-xs text-gray-500">GMV <span className="text-red-500">0.6%</span></p>
+    </div>
+</div>
 
         {/* Right-side Columns - This container will now be a separate column on large screens and will stack below the sales overview on smaller screens. */}
         <div className="flex flex-col gap-6">
