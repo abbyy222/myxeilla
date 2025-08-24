@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaChartLine, FaUsers, FaHome } from 'react-icons/fa';
 
-import ListingSVG from '../src/svg/listingOver.jsx';
-import UserSVG from '../src/svg/UsersOver.jsx';
+import  ListingSVG from '../src/svg/listingOver.jsx';
+import  UserSVG from '../src/svg/UsersOver.jsx';
 
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
@@ -27,21 +27,20 @@ const DashboardContent = () => {
       {/* Welcome Section */}
       <h2 className="text-2xl font-semibold mb-4 text-gray-800">Welcome, Ahmed</h2>
 
-      {/* Main Content Grid - The primary grid is now `lg:grid-cols-3` instead of always being a 3-column grid. On smaller screens, it will default to a single column, stacking the elements vertically. */}
+      {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-        {/* Sales Overview Section (Left Column) - Now takes up full width on small screens and 2/3 on large screens. */}
+        
+        {/* Sales Overview Section (Left Column) */}
         <div className="lg:col-span-2 bg-white rounded-lg shadow p-6">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-xl font-medium">Sales Overview</h3>
             <button className="text-sm px-6 py-2 rounded-full border border-gray-300">View Transactions</button>
           </div>
           <p className="text-sm text-gray-500 mb-4">Showing overview Jan 2022 - Sep 2022</p>
-
-          {/* This container now uses a column layout on mobile and a row on medium screens and up. The gap is added for better spacing. */}
+          
           <div className="flex flex-col md:flex-row gap-6">
-
-            {/* Chart Container - Removed the fixed width and used flex-grow to let it take up available space. On medium screens and up, it will take 60% of the space. */}
+            
+            {/* Chart Container - Now with a fixed width */}
             <div className="flex flex-col items-start w-full md:w-[60%]">
               <div className="flex justify-between items-center w-full mb-2">
                 <span className="text-sm text-gray-500">₦ (Millions)</span>
@@ -68,8 +67,9 @@ const DashboardContent = () => {
                 </ResponsiveContainer>
               </div>
             </div>
-
-          <div className="grid grid-cols-2 gap-4 flex-grow">
+            
+            {/* Metric Cards Container - Now using flex-grow */}
+           <div className="grid grid-cols-2 gap-4 flex-grow">
     <div className="bg-white rounded-xl border border-gray-200 px-4 py-2">
         <p className="text-base md:text-lg font-bold text-blue-500">₦120,000,000.00</p>
         <p className="text-xs text-gray-500">Total Inflow <span className="text-green-500">3.6%</span></p>
@@ -87,7 +87,10 @@ const DashboardContent = () => {
         <p className="text-xs text-gray-500">GMV <span className="text-red-500">0.6%</span></p>
     </div>
 </div>
-        {/* Right-side Columns - This container will now be a separate column on large screens and will stack below the sales overview on smaller screens. */}
+          </div>
+        </div>
+
+        {/* Right-side Columns */}
         <div className="flex flex-col gap-6">
           {/* Listings Overview Section */}
           <div className="bg-white rounded-lg shadow p-6">
@@ -113,7 +116,7 @@ const DashboardContent = () => {
               </div>
             </div>
           </div>
-
+          
           {/* Users Overview Section */}
           <div className="bg-white rounded-lg shadow p-6">
             <div className="flex justify-between items-center mb-4">
@@ -141,24 +144,27 @@ const DashboardContent = () => {
         </div>
       </div>
 
-      {/* Featured Listings Section - This grid will now have 1 column on mobile and 3 on medium screens and up. */}
+      {/* Featured Listings Section */}
       <div className="mt-6">
         <h3 className="text-xl font-medium mb-4">Featured Listings</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Placeholder for image cards */}
-          <div className="h-70 rounded-lg overflow-hidden relative">
-            <img src="/public/MostClicked.png" className="object-cover w-full h-full" />
+          <div className="h-70  rounded-lg overflow-hidden relative">
+            <img src="/public/MostClicked.png"  className="object-cover w-full h-full" />
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+              
             </div>
           </div>
-          <div className="h-70 rounded-lg overflow-hidden relative">
-            <img src="/public/MostWatched.png" className="object-cover w-full h-full" />
+          <div className="h-70  rounded-lg overflow-hidden relative">
+            <img src="/public/MostWatched.png"  className="object-cover w-full h-full" />
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+             
             </div>
           </div>
           <div className="h-70 bg-gray-200 rounded-lg overflow-hidden relative">
-            <img src="/public/HottestL.jpg" className="object-cover w-full h-full" />
+            <img src="/public/HottestL.jpg"  className="object-cover w-full h-full" />
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent text-white">
+              
             </div>
           </div>
         </div>
