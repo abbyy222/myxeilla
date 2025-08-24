@@ -73,11 +73,7 @@ const DashboardContent = () => {
             </div>
             
             {/* Metric Cards Container - Now using flex-grow */}
-<<<<<<< Updated upstream
-   <div className="grid grid-cols-2 gap-4 flex-grow">
-=======
-        <div className="grid grid-cols-2 gap-4 flex-grow">
->>>>>>> Stashed changes
+<div className="grid grid-cols-2 gap-4 flex-grow">
     <div className="bg-white rounded-xl border border-gray-200 px-2 sm:px-4 py-2">
         <p className="text-sm sm:text-base md:text-lg font-bold text-blue-500">₦120,000,000.00</p>
         <p className="text-xs text-gray-500">Total Inflow <span className="text-green-500">3.6%</span></p>
