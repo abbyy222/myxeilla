@@ -15,19 +15,15 @@ import CalendarModal from '../src/CalenderModal.jsx';
 import BudgetModal from '../src/BudgetModal.jsx';
 
 const Header = () => {
-  // Use state to track the modal's open/closed status
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
-   const [isBudgetOpen, setIsBudgetOpen] = useState(false);
+  const [isBudgetOpen, setIsBudgetOpen] = useState(false);
 
-  // Functions to open and close the modal
   const handleOpenCalendar = () => {
     setIsCalendarOpen(true);
   };
-
   const handleCloseCalendar = () => {
     setIsCalendarOpen(false);
   };
-  // Functions to open and close the Budget Modal
   const handleOpenBudget = () => {
     setIsBudgetOpen(true);
   };
@@ -35,44 +31,44 @@ const Header = () => {
     setIsBudgetOpen(false);
   };
 
-
   return ( 
     <>
-      <div className="flex justify-between items-center w-full px-6 py-4 bg-black text-white"> 
+      {/* The main header container. Added `md:px-6` to have consistent padding on medium screens and up.
+        `flex-wrap` is added to allow items to wrap to a new line on smaller screens if they don't fit. */}
+      <div className="flex flex-wrap justify-between items-center w-full px-4 md:px-6 py-4 bg-black text-white"> 
         {/* Left side: Logo and 'Join' */} 
-        <div className="flex items-center gap-6"> 
-          {/* Myxeilla Logo with Text */} 
-          <div className="flex items-center gap-2"> 
-            <MyxeillaLogoSVG className="h-6 w-6" /> {/* Adjust size as needed */} 
-            <span className="text-xl font-bold">myxeilla</span> 
+        <div className="flex items-center gap-2 md:gap-6"> 
+          <div className="flex items-center gap-1 md:gap-2"> 
+            <MyxeillaLogoSVG className="h-6 w-6" /> 
+            <span className="text-lg md:text-xl font-bold">myxeilla</span> 
           </div> 
         </div> 
         
         {/* Right side: Icons and User Profile */} 
-        <div className="flex items-center gap-4"> 
-          <NotificationSVG className="h-6 w-6" /> 
+        {/* Added `flex-wrap` to this container as well, so icons can wrap if needed. */}
+        <div className="flex flex-wrap items-center gap-2 md:gap-4 mt-2 md:mt-0"> 
+          <NotificationSVG className="h-5 w-5 md:h-6 md:w-6" /> 
           
-          {/* Calendar Icon - now with a click handler */}
           <div onClick={handleOpenCalendar} className="cursor-pointer">
-            <CalendarSVG className="h-6 w-6" /> 
+            <CalendarSVG className="h-5 w-5 md:h-6 md:w-6" /> 
           </div>
 
           <div onClick={handleOpenBudget} className="cursor-pointer">
-            <CalculatorSVG className="h-6 w-6" /> 
+            <CalculatorSVG className="h-5 w-5 md:h-6 md:w-6" /> 
           </div>
 
-          <MessageSVG className="h-6 w-6" /> 
+          <MessageSVG className="h-5 w-5 md:h-6 md:w-6" /> 
 
           {/* User Profile */} 
           <div className="flex items-center gap-2"> 
-            <DSVG className="h-8 w-8" /> 
+            <DSVG className="h-7 w-7 md:h-8 md:w-8" /> 
           </div> 
         </div> 
       </div> 
       
       {/* Render the Calendar Modal and Budget Modal component here */}
       <CalendarModal isOpen={isCalendarOpen} onClose={handleCloseCalendar} />
-       <BudgetModal isOpen={isBudgetOpen} onClose={handleCloseBudget} />
+      <BudgetModal isOpen={isBudgetOpen} onClose={handleCloseBudget} />
     </>
   ); 
 }; 
